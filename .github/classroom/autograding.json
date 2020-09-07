@@ -3,7 +3,7 @@
     {
       "name": "TestSequential",
       "setup": "",
-      "run": "make TestSequential && echo \"\\nTEST END\\n\"",
+      "run": "make TestSequential ",
       "input": "",
       "output": "",
       "comparison": "included",
