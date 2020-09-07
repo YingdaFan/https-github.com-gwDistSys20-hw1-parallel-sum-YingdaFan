@@ -40,7 +40,7 @@ kill -9 $(lsof -i:8080|tail -1|awk '"$1"!=""{print $2}')
 
 # shellcheck disable=SC1009
 kill -9 $(lsof -i:8083|tail -1|awk '"$1"!=""{print $2}')
-echo "#DO NOT MODIFY THIS FILE" >> tmp_res.txt ;
+#echo "#DO NOT MODIFY THIS FILE" >> tmp_res.txt ;
 if cmp test_exp.txt tmp_res.txt
 then
   echo '---' parallel sum http test: PASS
