@@ -13,7 +13,17 @@ import (
 )
 
 func Sum(fileName string) int {
-	return 0
+	A, err := readInts(fileName)
+	if err != nil {
+		log.Fatal(err)
+	}
+	var sum int = 0
+
+	for _, data := range A {
+		sum += data
+	}
+
+	return sum
 }
 
 //Read integers from file
