@@ -5,12 +5,20 @@
  */
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
-	sum := 0
+
 	//@TODO read file name from command line
 	//the argument should be `-f`
+	if os.Args[1] != "-f" {
+		os.Exit(-1)
+	}
+	sum := 0
+	sum = Sum(os.Args[2])
 
 	//DO NOT OUTPUT ANYTHING ABOVE THIS LINE
 	//DO NOT MODIFY OUTPUT FORMAT!!
